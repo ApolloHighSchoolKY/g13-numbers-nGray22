@@ -47,22 +47,14 @@ public class Number
 		int test = 1;
 		//A perfect number is any number equal to the sum of its divisors
 		//excluding itself.
-		for(test=1; test <= number-1; test++)
-			if(number%test < 1)
+		for(test=1; test < number; test++)
+			if(number%test == 0)
 				total = test + total;
 			
-			else 
-				test++;
-
-		//return (number==total);	
-		if (number == total)
-			return true;
-		return false;	
-		/*
-		if (number%test ==0)
-			total = test +total;
-			test++
-		*/
+			
+		return (number==total);	
+		
+		
 		
 	}
 
@@ -75,6 +67,7 @@ public class Number
 		returnString += number + " isOdd == " + isOdd() + "\n";
 		returnString += number + " isPerfect == " + isPerfect() + "\n\n";
 		
-		return "" + returnString;
+		//return "" + returnString;
+		return "" + number;
 	}
 }
